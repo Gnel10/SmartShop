@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    z-index: -1
+}
+::-webkit-scrollbar-thumb {
+    background: #535353;
+    border-radius: 10px;
+    cursor: pointer
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #222222;
+    cursor: pointer
+}
+body {
+    background-image: linear-gradient(150deg, #f8b8f8,#bbd1ff);
+}
+.navbar {
+    width: 100%;
+    height: 90px;
+    padding-bottom: 50px;
+    background-color: rgb(41, 41, 255);
+    color: white;
+    font-weight: 600;
+}
+.navbar .container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+.navbar .container-fluid .phonenumber{
+    display: flex;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+.navbar .container-fluid p{
+    margin-left: 7px;
+}
+.navbar .navbar-brand img {
+    width: 200px;
+    height: 100px;
+    margin-top: -20px;
+}
+.navbar .d-flex {
+    margin-right: 120px;
+}
+.navbar .d-flex input{
+    width: 450px;
+    height: 45px;
+}
+.navbar .d-flex button{
+    background-color: rgb(0, 151, 0);
+    color: white;
+    font-weight: 600;
+}
+.navbar .d-flex button:hover{
+    background-color: rgb(0, 124, 0);
+}
+#cardBtn i {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    font-size: 30px;
+}
+#container{
+    width: 90%;
+    height: 580px;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 15px -10px gray;
+    border-radius: 8px;
+    border: 1px solid rgb(253, 235, 207);
+
+}
+#carouselExampleIndicators .carousel-inner img{
+    width: 100%;
+    height: 500px;
+}
+#carouselExampleIndicators .carousel-inner{
+    width: 1000px;
+    height: 500px;
+}
+.container {
+    width: 90%;
+    height: 580px;
+    margin: 20px auto;
+    background-image: linear-gradient(150deg, #fff1ff,#eef3ff);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 15px -10px gray;
+    border-radius: 8px;
+    border: 1px solid rgb(253, 235, 207);
+}
+.container .card {
+    height: 440px;
+    margin-top: 60px;
+    box-shadow: 0px 20px 15px -10px gray;
+}
+.container .card .card-img-top {
+    height: 260px;
+}
+.container .card .card-title {
+    color: rgb(236, 171, 5);
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container .card .card-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+}
+.navbar .card-sum {
+    width: 150px;
+    height: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+}
+.container h1 {
+    position: absolute;
+    color: rgb(226, 166, 14);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    box-shadow: 0px 20px 15px -10px gray;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+.navbar .basket {
+    position: relative;
+}
+.navbar #basket {
+    position: absolute;
+    width: 300px;
+    padding: 20px;
+    top: 80px;
+    left: -300px;
+    background-color: whitesmoke;
+    box-shadow: 0 15px 20px -10px #ccc;
+    border-radius: 10px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    max-height: 250px;
+    overflow: auto;
+    color: black;
+}
+.navbar .show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 60px !important;
+}
+.navbar .basketItem {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 15px 20px -10px rgb(184, 184, 184);
+    margin: 10px 0;
+}
+.navbar .basketItemImg {
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.navbar .basketItemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.navbar span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    left: 15px;
+    border: solid red 1px;
+    border-radius: 50%;
+    background-color: red;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.navbar .fa-trash {
+    color: red;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.navbar .fa-trash:hover {
+    transform: scale(1.2);
+}
+.navbar .xxx {
+    font-size: 20px;
+    color: blue;
+    padding: 5px;
+}
+.navbar #total {
+    padding: 5px 10px;
+    border-bottom: 1px solid rgb(16, 16, 24);
+    width: 60%;
+    font-size: 17px;
+}
+.text-center {
+    height: 300px;
+    margin-top: 150px;
+}
+.text-center .p4{
+    height: 80px;
+}
+
+
+
+
+/* **********************  Responsive *********************** */
+
+
+@media(width:1024px) {
+    .phonenumber p {
+       display: none;
+    }
+    .phonenumber i {
+        display: none;
+    }
+    .container{
+        width: 70%;
+    }
+    #carouselExampleIndicators{
+        width:90%;
+    }
+    #carouselExampleIndicators .carousel-inner{
+        width: 90%;
+
+    }
+    .footer-text .container{
+        width: 700px;
+        height: 350px;
+    }
+}
+
+
+@media(width:768px){
+    .navbar .d-flex input{
+        width: 250px;
+        height: 45px;
+    }
+    .phonenumber p {
+        display: none;
+     }
+     .phonenumber i {
+         display: none;
+     }
+     .container{
+        width: 90%;
+    }
+    #carouselExampleIndicators{
+        width:90%;
+    }
+    #carouselExampleIndicators .carousel-inner{
+        width: 90%;
+
+    }
+}
+
+
+@media(width:425px){
+    .navbar {
+        width: 720px;
+    }
+    .phonenumber p {
+        display: none;
+     }
+     .phonenumber i {
+         display: none;
+     }
+    .navbar .d-flex input{
+        width: 200px;
+        height: 42px;
+    }
+    .navbar .d-flex {
+        margin-right: 150px;
+    }
+    #cardBtn i{
+       display: none;
+   }
+   #cardBtn span{
+       display: none;
+   }
+  .basket span {
+      display: none;
+  }
+  .container{
+    width: 650px;
+    margin-left: 30px;
+}
+#carouselExampleIndicators{
+    width:90%;
+}
+#carouselExampleIndicators .carousel-inner{
+    width: 90%;
+}
+.footer-text .container{
+    height: 850px;
+}
+
+
+}
